@@ -1,0 +1,64 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// The current database to use.
+use("test");
+
+db.articulos.drop()
+
+// Create a new collection.
+db.createCollection("articulos");
+
+db.articulos.insertOne({
+  _id: 1,
+  nombre: "MULTIFUNCION HP DESKJET 2675",
+  rubro: "impresora",
+  precio: 3000,
+  stock: 20,
+});
+db.articulos.insertOne({
+  _id: 2,
+  nombre: "MULTIFUNCION EPSON EXPRESSION XP241",
+  rubro: "impresora",
+  precio: 3700,
+  stock: 5,
+});
+db.articulos.insertOne({
+  _id: 3,
+  nombre: "LED 19 PHILIPS",
+  rubro: "monitor",
+  precio: 4500,
+  stock: 2,
+});
+db.articulos.insertOne({
+  _id: 4,
+  nombre: "LED 22 PHILIPS",
+  rubro: "monitor",
+  precio: 5700,
+  stock: 4,
+});
+db.articulos.insertOne({
+  _id: 5,
+  nombre: "LED 27 PHILIPS",
+  rubro: "monitor",
+  precio: 12000,
+  stock: 1,
+});
+db.articulos.insertOne({
+  _id: 6,
+  nombre: "LOGITECH M90",
+  rubro: "mouse",
+  precio: 300,
+  stock: 4,
+});
+
+db.articulos.find()
+
+db.articulos.deleteMany({rubro:'impresora'})
+db.articulos.deleteMany({rubro:{$eq : 'impresora' }})
+
+db.articulos.find()
+
+db.articulos.deleteMany({_id:{$gte : 5 }})
+
+db.articulos.find() 
