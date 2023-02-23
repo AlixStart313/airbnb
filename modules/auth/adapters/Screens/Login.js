@@ -56,27 +56,10 @@ export default function Login() {
             errorMessage={error.password}
           />
 
-          <Input
-            placeholder="Repetir contraseña"
-            containerStyles={styles.input}
-            rightIcon={
-              <Icon
-                type="material-community"
-                name={showRepeatPassword ? "eye-off-outline" : "eye-outline"}
-                size={22}
-                onPress={() => setShowRepeatPassword(!showRepeatPassword)}
-              />
-            }
-            secureTextEntry={showRepeatPassword}
-            onChange={(e) => changePayload(e, "repeatPassword")}
-            errorMessage={error.repeatPassword}
-          />
-
           <Button
-            title="Crear cuenta"
+            title="Iniciar Sesion"
             containerStyles={styles.btnContainer}
-            buttonStyles={styles.btn}
-            
+            buttonStyles={styles.btn} 
           />
         </View>
       </View>
